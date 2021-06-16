@@ -1,3 +1,4 @@
+import uvicorn
 from fastapi import FastAPI
 from api.delay import DelayCoefficient
 from api.flight import Flight_api, FlightInfo
