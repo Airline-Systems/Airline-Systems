@@ -1,13 +1,8 @@
 #!/usr/bin/python
-import sys
-from suds.client import Client
-import os, sys
+import os
 from suds.client import Client
 import logging
 import datetime
-import json
-import requests
-
 from helpers.icao_to_iata_converter import airport
 
 
