@@ -303,6 +303,6 @@ async def airlineOptimizer(flight_number: int, occupancy=170, occupancy2=167) ->
     return {"data": flight}
 
 if __name__ == "__main__":
-    uvicorn.run("main1:app", port=8000, reload=False)
+    uvicorn.run("main1:app", host="0.0.0.0", port=8000, reload=False)
 
 
