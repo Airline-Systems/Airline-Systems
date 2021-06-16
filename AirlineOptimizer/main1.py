@@ -1,6 +1,5 @@
 import uvicorn
 from fastapi import FastAPI
-import uvicorn
 from api.delay import DelayCoefficient
 from api.flight import Flight_api, FlightInfo
 from helpers.booster import CountryCoefficient, TimeCoefficient, DurationCoefficient
