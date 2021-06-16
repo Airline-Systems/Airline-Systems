@@ -1,0 +1,57 @@
+#hot drinks weights
+pax_weight_hot_drinks: 0.8543
+delay_weight_hot_drinks: 0.2637
+culture_weight_hot_drinks: 0.182
+
+#kids menu weights
+pax_weight_kids_menu: 0.3267
+delay_weight_kids_menu: 0.4765
+culture_weight_kids_menu: 0.1968
+
+#fresh bakery weights
+pax_weight_bakery: 0.7322
+delay_weight_bakery: 0.1221
+culture_weight_bakery: 0.1457
+
+#muffins weights
+pax_weight_muffins: 0.65536
+delay_weight_muffins: 0.3422
+culture_weight_muffins: 0.00244
+
+#salads weights
+pax_weight_salads: 0.61342
+delay_weight_salads: 0.2431
+culture_weight_salads: 0.14348
+
+#sandwich weights
+pax_weight_sandwich: 0.64321
+delay_weight_sandwich: 0.343232
+culture_weight_sandwich: 0.013558
+
+#hot meals weight
+pax_weight_hot_meals: 0.6312
+delay_weight_hot_meals: 0.21223
+culture_weight_hot_meals: 0.15657
+
+#hot snacks
+pax_weight_snacks: 0.4311
+delay_weight_snacks: 0.4322
+culture_weight_snacks: 0.1367
+
+#cold bevarages weights
+pax_weight_drinks: 0.5432
+delay_weight_drinks: 0.321
+culture_weight_drinks: 0.1358
+
+#juice weights
+pax_weight_juice: 0.4322
+delay_weight_juice: 0.3223
+culture_weight_juice: 0.2455
+
+#water weights
+pax_weight_water: 0.5432
+delay_weight_water: 0.2342
+culture_weight_water: 0.2226
+
+
+
