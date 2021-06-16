@@ -2,7 +2,7 @@ import csv
 
 
 def airport(destination_icao):
-    csv_file = csv.reader(open('./icao_iata.csv', 'r'))
+    csv_file = csv.reader(open('helpers/icao_iata.csv', 'r'))
 
     # find the value in the relevant csv and return an IATA code
     for row in csv_file:
