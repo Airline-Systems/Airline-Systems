@@ -44,7 +44,7 @@ PyPrind==2.11.3
 pyrsistent==0.17.3
 pySmartDL==1.3.4
 python-dateutil==2.8.1
-pytz==2021.1
+pytz==2017.2
 PyYAML==5.3.1
 PyWavelets==1.1.1
 requests==2.25.1
