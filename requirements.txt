@@ -53,6 +53,7 @@ scipy==1.5.4
 six==1.16.0
 soupsieve==2.2.1
 starlette==0.14.2
+suds-py3==1.4.4.1
 threadpoolctl==2.1.0
 typing-extensions==3.10.0.0
 tzlocal==2.1
