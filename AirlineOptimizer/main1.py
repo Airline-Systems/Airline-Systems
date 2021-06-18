@@ -13,7 +13,7 @@ from helpers.daytime import *
 app = FastAPI()
 
 @app.get('/{flight_number}', tags=['Flight'])
-async def airlineOptimizer(flight_number: int, token: str = Depends(oauth2_scheme), occupancy=170, occupancy2=167) -> dict:
+async def airlineOptimizer(flight_number: int, occupancy=170, occupancy2=167) -> dict:
     flight_number1 = flight_number
     flight_number2 = flight_number1 + 1
     flight_number1_temp = str('QS'+str(flight_number1))
@@ -265,7 +265,7 @@ async def airlineOptimizer(flight_number: int, token: str = Depends(oauth2_schem
                 'Restaurants in destination': CoefficientRestaurantsCategory2(flight_number),
                 'airport_restaurants_statement': AirportRestaurantsStatement(flight_number)
             },
-            'Cabin cres': {
+            'Cabin crew': {
                 'SC': sc_name(flight_number),
                 'CC1': cc1_name(flight_number),
                 'CC2': cc2_name(flight_number),
@@ -300,12 +300,12 @@ async def airlineOptimizer(flight_number: int, token: str = Depends(oauth2_schem
         }
     }
 
-    return {"token": token, "data": flight}
-
-#if __name__ == "__main__":
-    #uvicorn.run("main1:app", host="0.0.0.0", port=8000, reload=False)
+    return {"data": flight}
 
 if __name__ == "__main__":
-    uvicorn.run("main1:app", port=8000, reload=True)
+    uvicorn.run("main1:app", host="0.0.0.0", port=8000, reload=False)
+
+#if __name__ == "__main__":
+    #uvicorn.run("main1:app", port=8000, reload=True)
 
 

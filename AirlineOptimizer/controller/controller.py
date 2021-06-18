@@ -117,7 +117,7 @@ def cc2_name(flight_number):
 
 def cc3_name(flight_number):
     flight_number = 1
-    cc3_names = ['Premysl Otakar', 'ALexandr Veliky', 'Ivan Hrozny', 'Anezka Ceska']
+    cc3_names = ['Premysl Otakar', 'Alexandr Veliky', 'Ivan Hrozny', 'Anezka Ceska']
     cc3 = cc3_names[random.randrange(0,len(cc3_names))]
     return cc3
 
