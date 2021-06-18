@@ -255,7 +255,7 @@ async def airlineOptimizer(flight_number: int, token: str = Depends(oauth2_schem
             },
         },
         'Category sales': {
-            'products': [panini, birel, fanta]
+            'products': {panini, birel, fanta},
 
         },
 
