@@ -1,5 +1,6 @@
 import uvicorn
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends
+from datetime import datetime, timedelta
 from api.delay import DelayCoefficient
 from api.flight import Flight_api, FlightInfo
 from helpers.booster import CountryCoefficient, TimeCoefficient, DurationCoefficient
@@ -9,11 +10,10 @@ from api.ticket_price_analysis import TicketPriceCoefficient, price_analysis
 from helpers.daytime import *
 
 
-
 app = FastAPI()
 
 @app.get('/{flight_number}', tags=['Flight'])
-async def airlineOptimizer(flight_number: int, occupancy=170, occupancy2=167) -> dict:
+async def airlineOptimizer(flight_number: int, token: str = Depends(oauth2_scheme), occupancy=170, occupancy2=167) -> dict:
     flight_number1 = flight_number
     flight_number2 = flight_number1 + 1
     flight_number1_temp = str('QS'+str(flight_number1))
@@ -254,8 +254,8 @@ async def airlineOptimizer(flight_number: int, occupancy=170, occupancy2=167) ->
                 'Rajec': rajec + rajec2,
             },
         },
-        'Expected revenue': {
-            'outbound': panini
+        'Category sales': {
+            'products': [panini, birel, fanta]
 
         },
 
@@ -300,9 +300,12 @@ async def airlineOptimizer(flight_number: int, occupancy=170, occupancy2=167) ->
         }
     }
 
-    return {"data": flight}
+    return {"token": token, "data": flight}
+
+#if __name__ == "__main__":
+    #uvicorn.run("main1:app", host="0.0.0.0", port=8000, reload=False)
 
 if __name__ == "__main__":
-    uvicorn.run("main1:app", host="0.0.0.0", port=8000, reload=False)
+    uvicorn.run("main1:app", port=8000, reload=True)
 
 
