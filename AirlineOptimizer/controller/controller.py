@@ -3,6 +3,7 @@ from api.delay import DelayCoefficient
 from api.flight import Metar_destination_api
 from api.ticket_price_analysis import TicketPriceCoefficient
 from helpers.daytime_factor import DaytimeProduct
+#from helpers.iata_to_country_converter import IataToCountry
 
 
 
@@ -82,15 +83,6 @@ def AirportRestaurantsStatement(flight_number):
     airport_restaurants_statement = "all restaurants are open"
     return airport_restaurants_statement
 
-def AveragePAXRatingInRoute(flight_number):
-    flight_number = 2
-    average_PAX_rating_in_route = random.uniform(2.9856, 3.3542)
-    return average_PAX_rating_in_route
-
-def AveragePAXRatingInRouteStatement(flight_number):
-    flight_number = 1
-    average_PAX_rating_in_route_statement = 'PAX are mostly satisfied'
-    return average_PAX_rating_in_route_statement
 
 def MeanSalesInRoute(flight_number):
     flight_number = 1
@@ -121,26 +113,6 @@ def cc3_name(flight_number):
     cc3 = cc3_names[random.randrange(0,len(cc3_names))]
     return cc3
 
-def L1MeanPerformanceCoefficient(flight_number):
-    flight_number = 1
-    l1_mean_performance_coefficient = random.uniform(0.9856, 1.3542)
-    return l1_mean_performance_coefficient
-
-def R1MeanPerformanceCoefficient(flight_number):
-    flight_number = 1
-    r1_mean_performance_coefficient = random.uniform(0.9856, 1.3542)
-    return r1_mean_performance_coefficient
-
-def L2MeanPerformanceCoefficient(flight_number):
-    flight_number = 1
-    l2_mean_performance_coefficient = random.uniform(0.9856, 1.3542)
-    return l2_mean_performance_coefficient
-
-def CCSalesPerfomanceStatement(flight_number):
-    flight_number = 1
-    CC_sales_perfomance_statement = 'CCs are overperforming'
-    return CC_sales_perfomance_statement
-
 def NoDelayProbability(flight_number):
     flight_number = 1
     no_delay_probability = 0.23375322
@@ -170,16 +142,6 @@ def MetarDestination(destination_icao):
     metar_destination = Metar_destination_api(destination_icao)
     return metar_destination
 
-def AircraftRegistration(flight_number):
-    flight_number = 1
-    aircraft_registration = 'D-AISK'
-    return aircraft_registration
-
-def PreviousDestination(flight_number):
-    flight_number = 1
-    previous_destination = 'BER'
-    return previous_destination
-
 def DelayFromPreviousDestinationMin(flight_number):
     flight_number = 1
     delay_from_previous_destination_min = random.uniform(9,12)
@@ -190,166 +152,10 @@ def FlightCoefficient(flight_number):
     flight_coefficient = random.uniform(0.9856, 1.3542)
     return flight_coefficient
 
-def DelayPredictionCoefficient(flight_number):
-    flight_number = 1
-    delay_prediction_coefficient = random.uniform(0.9856, 1.3542)
-    return delay_prediction_coefficient
-
-def DelayPredictionStatement(flight_number):
-    flight_number = 1
-    delay_prediction_statement = 'short delay is expected'
-    return delay_prediction_statement
-
-def PublicHolidayInOrigin(flight_number):
-    flight_number = 1
-    public_holiday_in_origin = 0
-    return public_holiday_in_origin
-
-def PublicHolidayInDestination(flight_number):
-    flight_number = 1
-    public_holiday_in_destination = 0
-    return public_holiday_in_destination
-
-def PublicHolidayInOriginCoefficient(flight_number):
-    flight_number = 1
-    public_holiday_in_origin_coefficient = 0
-    return public_holiday_in_origin_coefficient
-
-def PublicHolidayInDestinationCoefficient(flight_number):
-    flight_number =1
-    public_holiday_in_destination_coeffcicient = 0
-    return public_holiday_in_destination_coeffcicient
-
-def PublicHolidayStatement(flight_number):
-    flight_number = 1
-    public_holiday_statement = 0
-    return public_holiday_statement
-
-def Nationality1(flight_number):
-    flight_number = 1
-    nationality1='Russian Federation'
-    return nationality1
-
-def Nationality1Value(flight_number):
-    flight_number = 1
-    nationality_value = 78
-    return nationality_value
-
-def Nationality2(flight_number):
-    flight_number = 1
-    nationality2='United States of America'
-    return nationality2
-
-def Nationality1Value2(flight_number):
-    flight_number = 1
-    nationality_value2 = 24
-    return nationality_value2
-
-def Nationality3(flight_number):
-    flight_number = 1
-    nationality3='Germany'
-    return nationality3
-
-def Nationality1Value3(flight_number):
-    flight_number = 1
-    nationality_value3 = 22
-    return nationality_value3
-
-def Nationality4(flight_number):
-    flight_number = 1
-    nationality4 = 'Israel'
-    return nationality4
-
-def Nationality1Value4(flight_number):
-    flight_number = 1
-    nationality_value4 = 18
-    return nationality_value4
-
-def Nationality5(flight_number):
-    flight_number = 1
-    nationality5 = 'Italy'
-    return nationality5
-
-def Nationality1Value5(flight_number):
-    flight_number = 1
-    nationality_value5 = 17
-    return nationality_value5
-
-def PaxNationalityStatement(flight_number):
-    flight_number = 1
-    pax_nationality_statement = 'PAX are overspending'
-    return pax_nationality_statement
-
-def SportEventsInOrigin(flight_number):
-    flight_number = 1
-    sport_events_in_origin = 0
-    return sport_events_in_origin
-
-def CultureEventsInOrigin(flight_number):
-    flight_number = 1
-    culture_events_in_origin = 0
-    return culture_events_in_origin
-
-def SportEventsInDestination(flight_number):
-    flight_number = 1
-    sport_events_in_destination = 0
-    return sport_events_in_destination
-
-def CultureEventsInDestination(flight_number):
-    flight_number = 1
-    culture_events_in_destination = 0
-    return culture_events_in_destination
-
-
-def CuluturalEventsCoefficient(flight_number):
-    flight_number = 1
-    culutural_events_coefficient = 0
-    return culutural_events_coefficient
-
-def CuluturalEventsCoefficient(flight_number):
-    flight_number = 1
-    culutural_events_coefficient = 0
-    return culutural_events_coefficient
-
-def PublicEventsStatement(flight_number):
-    flight_number = 1
-    public_events_statement = "event"
-    return public_events_statement
-
 def DayTime(flight_number):
     flight_number = 1
     day_time = 0
     return day_time
-
-def BreakfastCoefficient(flight_number):
-    falight_number = 1
-    breakfast_coefficient = random.uniform(0.5856, 0.8542)
-    return breakfast_coefficient
-
-def MainCourseCoefficient(flight_number):
-    falight_number = 1
-    main_course_coefficient = random.uniform(0.9856, 1.3542)
-    return main_course_coefficient
-
-def SnackCoefficient(flight_number):
-    falight_number = 1
-    snack_coefficient = random.uniform(0.7856, 0.9542)
-    return snack_coefficient
-
-def AlcoholCoefficient(flight_number):
-    falight_number = 1
-    alcohol_coefficient = random.uniform(1.1856, 1.3542)
-    return alcohol_coefficient
-
-def DayTimeStatement(flight_number):
-    falight_number = 1
-    day_time_statement = 'Evening flight'
-    return day_time_statement
-
-def FlightDurationMinutes(flight_number):
-    flight_number = 1
-    flight_duration_minutes = 95
-    return flight_duration_minutes
 
 
 def FlightDurationCoefficient(flight_number):
@@ -357,39 +163,59 @@ def FlightDurationCoefficient(flight_number):
     flight_duration_coefficient = random.uniform(0.9856, 1.1542)
     return flight_duration_coefficient
 
-def FlightDurationStatement(flight_number):
-    flight_number = 1
-    flight_duration_statement = 'Short-haul flight'
+def FlightDurationStatement(duration):
+    duration_hours = int(duration[1])
+    if duration_hours < 1:
+        flight_duration_statement = 'very short flight'
+    elif duration_hours >= 1 and duration_hours < 2:
+        flight_duration_statement = 'short flight'
+    elif duration_hours >= 2 and duration_hours < 3:
+        flight_duration_statement = 'midrange flight'
+    elif duration_hours >= 3 and duration_hours < 4:
+        flight_duration_statement = 'long flight'
+    if duration_hours >= 4:
+        flight_duration_statement = 'very long flight'
     return flight_duration_statement
 
-def FQTV(flight_number):
-    flight_number = 1
-    FQTV = random.uniform(8,12)
-    return FQTV
 
-def FQTVCoefficient(flight_number):
-    flight_number = 1
-    FQTV_coefficient = random.uniform(0.9856, 1.1542)
-    return FQTV_coefficient
 
-def FQTVStatement(flight_number):
-    flight_number = 1
-    FQTV_statement = 'More silver-card holders than usual'
-    return FQTV_statement
+def SalesFactor(panini, panini2):
+    panini = (panini + panini2)/2
+    if panini < 2:
+        prediction_factor = 'Very low sales'
+    elif panini >= 4 and panini <= 8:
+        prediction_factor = 'Low sales'
+    elif panini >= 8 and panini <= 12:
+        prediction_factor = 'Average sales'
+    elif panini >= 12 and panini <= 16:
+        prediction_factor = 'Overaverage sales'
+    elif panini >= 16 and panini <= 20:
+        prediction_factor = 'High sales'
+    elif panini > 20:
+        prediction_factor = 'Very high sales'
 
-def InboundTransit(flight_number):
-    flight_number = 1
-    inbound_transit = random.uniform(5,18)
-    return inbound_transit
+    return prediction_factor
 
-def OutboundTransit(flight_number):
-    flight_number = 1
-    outbound_transit = random.uniform(5,18)
-    return outbound_transit
+def NationalityMajorityCountry(origin):
+    #country = IataToCountry(origin)
+    country = "Czech republic"
+    return country
 
-def TransitPAXCoefficient(flight_number):
-    flight_number = 1
-    transit_PAX_coefficient = random.uniform(0.9856, 1.1542)
-    return transit_PAX_coefficient
+def NationalityMajorityCount(occupancy):
+    nationality_count = occupancy/2 + random.randint(5,25)
+    return nationality_count
+
+def NationalityMinorityCountry(destination):
+    #country = IataToCountry(destination)
+    country = "Spain"
+    return country
+
+def NationalityMinorityCount(occupancy, national_majority_count):
+    nationality_count = occupancy - national_majority_count + random.randint(5,25)
+    return nationality_count
+
+
+
+
 
 

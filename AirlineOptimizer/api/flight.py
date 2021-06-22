@@ -26,6 +26,7 @@ def FlightInfo(flights):
 
     for flight in flights:
         origin = airport(flight['origin'])
+        origin_city = flight['originCity']
         flightNumber = flight['ident']
         aircrafType = flight['aircrafttype']
         destination_icao = flight['destination']
@@ -33,9 +34,10 @@ def FlightInfo(flights):
         departureTime = datetime.datetime.fromtimestamp(flight['filed_departuretime']).strftime('%H:%M')
         arrivalTime = datetime.datetime.fromtimestamp(flight['estimatedarrivaltime']).strftime('%H:%M')
         carrierCode = 'QS'
-        duration = flight['filed_ete']
+        duration = flight['filed_ete'][0:5]
         destination = airport(destination_icao)
-        flightInfo = [origin, flightNumber, aircrafType, destination_icao, destination, departureDate, departureTime, carrierCode, duration, arrivalTime]
+        destination_city = flight['destinationCity']
+        flightInfo = [origin, flightNumber, aircrafType, destination_icao, destination, departureDate, departureTime, carrierCode, duration, arrivalTime, origin_city, destination_city]
         return flightInfo
 
 def Metar_destination_api(destination_icao):

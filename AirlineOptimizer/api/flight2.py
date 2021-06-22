@@ -17,7 +17,7 @@ api = Client(url, username=username, password=apiKey)
 
 
 # Get the flights enroute
-result = api.service.FlightInfo('QS1178', 1)
+result = api.service.FlightInfo('QS1152', 1)
 print(result)
 #taf = api.service.NTaf('LKPR')
 #print(taf)
