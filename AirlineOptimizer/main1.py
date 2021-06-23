@@ -195,6 +195,24 @@ async def airlineOptimizer(flight_number: int, occupancy=random.randint(160,189)
     cappy_orange2 =Product('cappy_orange', occupancy2, culture_coefficients, daytime2)
     rajec2 = Product('rajec', occupancy2, culture_coefficients, daytime2)
 
+    salty_snacks = cricri + pringles_original + pringles_sour + peanuts + olives + tapas + lentil_salad + noodle_soup + couscous
+    sweet_snacks = macarons + cheesecake + nutella + haribo + m_n_m + snickers
+    sandwich = panini + chicken_bacon + cheese_baguette + quiche
+    soft_drinks = schweppes + fanta + coca_cola + coca_cola_zero + sprite + birel + cappy_apple + cappy_orange + rajec
+    alcohol_beverages = pilsner + white_wine + red_wine + prosecco
+    shots = vodka + jameson + beefeater + becherovka + ripe_pear
+
+    salty_snacks2 = cricri2 + pringles_original2 + pringles_sour2 + peanuts2 + olives2 + tapas2 + lentil_salad2 + noodle_soup2 + couscous2
+    sweet_snacks2 = macarons2 + cheesecake2 + nutella2 + haribo2 + m_n_m2 + snickers2
+    sandwich2 = panini2 + chicken_bacon2 + cheese_baguette2 + quiche2
+    soft_drinks2 = schweppes2 + fanta2 + coca_cola2 + coca_cola_zero2 + sprite2 + birel2 + cappy_apple2 + cappy_orange2 + rajec2
+    alcohol_beverages2 = pilsner2 + white_wine2 + red_wine2 + prosecco2
+    shots2 = vodka2 + jameson2 + beefeater2 + becherovka2 + ripe_pear2
+
+
+
+
+
 
 
 
@@ -210,10 +228,6 @@ async def airlineOptimizer(flight_number: int, occupancy=random.randint(160,189)
                         'destination city': destination_city,
                         'aircraft': aircraft_type,
                         'PAX': occupancy,
-                        'male': male,
-                        'female': female,
-                        'children': children,
-                        'inf': inf,
                         'nationality majority': nationality_majority_country,
                         'nationality majority count': nationality_majority_count,
                         'nationality minority': nationality_minority_country,
@@ -235,10 +249,6 @@ async def airlineOptimizer(flight_number: int, occupancy=random.randint(160,189)
             'destination city': destination_city2,
             'aircraft': aircraft_type2,
             'PAX': occupancy2,
-            'male': male2,
-            'female': female2,
-            'children': children2,
-            'inf': inf2,
             'nationality majority': nationality_majority_country2,
             'nationality majority count': nationality_majority_count2,
             'nationality minority': nationality_minority_country2,
@@ -246,25 +256,6 @@ async def airlineOptimizer(flight_number: int, occupancy=random.randint(160,189)
             'flight_duration': duration2,
             'flight duration statement': duration_statement,
             'daytime2': daytime2,
-        },
-        'Catering _load_general':{
-            'Salty snacks': cricri + pringles_original + pringles_sour + peanuts + olives + tapas + lentil_salad + noodle_soup + couscous,
-            'Sweet snacks': macarons + cheesecake + nutella + haribo + m_n_m + snickers,
-            'Sandwich': panini + chicken_bacon + cheese_baguette + quiche,
-            'Soft drinks': schweppes + fanta + coca_cola + coca_cola_zero + sprite + birel + cappy_apple + cappy_orange + rajec,
-            'Alcohol beverages': pilsner + white_wine + red_wine + prosecco,
-            'Shots': vodka + jameson + beefeater + becherovka + ripe_pear,
-
-        },
-
-        'Catering _load_general2': {
-            'Salty snacks2': cricri2 + pringles_original2 + pringles_sour2 + peanuts2 + olives2 + tapas2 + lentil_salad2 + noodle_soup2 + couscous2,
-            'Sweet snacks2': macarons2 + cheesecake2 + nutella2 + haribo2 + m_n_m2 + snickers2,
-            'Sandwich2': panini2 + chicken_bacon2 + cheese_baguette2 + quiche2,
-            'Soft drinks2': schweppes2 + fanta2 + coca_cola2 + coca_cola_zero2 + sprite2 + birel2 + cappy_apple2 + cappy_orange2 + rajec2,
-            'Alcohol beverages2': pilsner2 + white_wine2 + red_wine2 + prosecco2,
-            'Shots2': vodka2 + jameson2 + beefeater2 + becherovka2 + ripe_pear2,
-
         },
 
         'Catering_load': {
@@ -357,7 +348,15 @@ async def airlineOptimizer(flight_number: int, occupancy=random.randint(160,189)
 
             },
             'sales_factor': SalesFactor(panini, panini2),
-            'sample set': [12, 13, 14, 15, 16, 17, 18, 19]
+            'catering load general': [salty_snacks, sweet_snacks, sandwich, alcohol_beverages, soft_drinks, shots],
+            'catering load general2': [salty_snacks2, sweet_snacks2, sandwich2, alcohol_beverages2, soft_drinks2, shots2],
+            'pax distribution': [male, female, children, inf],
+            'pax distribution2': [male2, female2, children2, inf2],
+            'nationality count': [nationality_majority_count, nationality_minority_count],
+            'nationality country': [nationality_majority_country, nationality_minority_country],
+            'nationality count2': [nationality_majority_count2, nationality_minority_count2],
+            'nationality country2': [nationality_majority_country2, nationality_minority_country2],
+
         },
 
     }
