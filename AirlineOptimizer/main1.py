@@ -357,7 +357,9 @@ async def airlineOptimizer(flight_number: int, occupancy=random.randint(160,189)
 
             },
             'sales_factor': SalesFactor(panini, panini2),
-        }
+            'sample set': [12, 13, 14, 15, 16, 17, 18, 19]
+        },
+
     }
 
     return {"data": flight}
