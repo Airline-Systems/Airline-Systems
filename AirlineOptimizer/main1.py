@@ -105,8 +105,7 @@ async def airlineOptimizer(flight_number: int, occupancy=random.randint(160,189)
     cheese_baguette = Product('cheese_baguette', occupancy, culture_coefficients, daytime)
     quiche = Product('quiche', occupancy, culture_coefficients, daytime)
 
-    tapas = Product('tapas', occupancy, culture_coefficients, daytime)
-    penne = Product('penne', occupancy, culture_coefficients, daytime)
+
     lentil_salad = Product('lentil_salad', occupancy, culture_coefficients, daytime)
     noodle_soup = Product('noodle_soup', occupancy, culture_coefficients, daytime)
     couscous = Product('couscous', occupancy, culture_coefficients, daytime)
@@ -158,8 +157,8 @@ async def airlineOptimizer(flight_number: int, occupancy=random.randint(160,189)
     cheese_baguette2 = Product('cheese_baguette', occupancy2, culture_coefficients, daytime2)
     quiche2 = Product('quiche', occupancy2, culture_coefficients, daytime2)
 
-    tapas2 = Product('tapas', occupancy2, culture_coefficients, daytime2)
-    penne2 = Product('penne', occupancy2, culture_coefficients, daytime2)
+
+
     lentil_salad2 = Product('lentil_salad', occupancy2, culture_coefficients, daytime2)
     noodle_soup2 = Product('noodle_soup', occupancy2, culture_coefficients, daytime2)
     couscous2 = Product('couscous', occupancy2, culture_coefficients, daytime2)
@@ -203,7 +202,7 @@ async def airlineOptimizer(flight_number: int, occupancy=random.randint(160,189)
     cappy_orange2 =Product('cappy_orange', occupancy2, culture_coefficients, daytime2)
     rajec2 = Product('rajec', occupancy2, culture_coefficients, daytime2)
 
-    salty_snacks = (cricri + pringles_original + pringles_sour + peanuts + olives + tapas + lentil_salad + noodle_soup + couscous)/9
+    salty_snacks = (cricri + pringles_original + pringles_sour + peanuts + olives + lentil_salad + noodle_soup + couscous)/9
     sweet_snacks = (macarons + cheesecake + nutella + haribo + m_n_m + snickers)/6
     sandwich = (panini + chicken_bacon + cheese_baguette + quiche)/4
     hot_drinks = (americano + cappuccino + tea)/3
@@ -211,7 +210,7 @@ async def airlineOptimizer(flight_number: int, occupancy=random.randint(160,189)
     alcohol_beverages = (pilsner + white_wine + red_wine + prosecco)/4
     shots = (vodka + jameson + beefeater + becherovka + ripe_pear)/5
 
-    salty_snacks2 = (cricri2 + pringles_original2 + pringles_sour2 + peanuts2 + olives2 + tapas2 + lentil_salad2 + noodle_soup2 + couscous2)/9
+    salty_snacks2 = (cricri2 + pringles_original2 + pringles_sour2 + peanuts2 + olives2 + lentil_salad2 + noodle_soup2 + couscous2)/9
     sweet_snacks2 = (macarons2 + cheesecake2 + nutella2 + haribo2 + m_n_m2 + snickers2)/6
     sandwich2 = (panini2 + chicken_bacon2 + cheese_baguette2 + quiche2)/4
     hot_drinks2 = (americano2 + cappuccino2 + tea2)/3
@@ -268,34 +267,10 @@ async def airlineOptimizer(flight_number: int, occupancy=random.randint(160,189)
             'daytime2': daytime2,
         },
         'Preorders': {
-            'Veprove rizky 1kg': 2,
-            'Veprove rizky 0.5kg': 3,
-            'Kureci rizky 1kg': 2,
-            'Kureci rizky 0.5kg': 1,
-            'Ovocna misa': 2,
-            'Cokoladove kosicky s kremem a ovocem': 1,
-            'Variace chlebicku': 2,
-            'Variace kanapek': 1,
-            'Ovocne spizy': 2,
-            'Chorizo': 1,
-            'Tyrolska sunka': 1,
-            'Kachni prsa uzena': 2,
-            'Kureci prsa uzena': 1,
-            'Kachni pastika': 2,
-            'Grilovany kozi syr': 1,
-            'Plneny vinny list': 2,
-            'Jablkova zemlovka': 1,
-            'Quiche': 2,
-            'Vajecna omeleta': 2,
-            'Uzena kachni prsa': 3,
-            'Kureci steak': 2,
-            'Teleci licka': 1,
-            'Kureci cacciatore': 1,
-            'Stredomorska frittata': 2,
-            'Kojenecka vyziva': 1,
-            'Detske jidlo teple': 2,
-            'Detske jidlo studene': 1,
-            'Bohemia sekt brut': 11,
+            'pork schnitzel 1kg': {"Veprove rizky 1kg": 2},
+            'chicken schnitzels ':{'Veprove rizky 0.5kg': 3},
+            'chicken schnitzels':{'Kureci rizky 1kg': 2},
+
 
         },
 
@@ -307,14 +282,10 @@ async def airlineOptimizer(flight_number: int, occupancy=random.randint(160,189)
                 'Quiche': quiche + quiche2,
             },
             'Salty snacks': {
-                'Tapas Box': tapas + tapas2,
-                'Penne Arrabbiata': penne + penne2,
-                'Lentil Salad': lentil_salad + lentil_salad2,
                 'Nissin Cup Noodles': noodle_soup + noodle_soup2,
                 'Couscous Quinoa & Vegetables': couscous + couscous2,
             },
             'Sweat snacks': {
-                'Macaroons 3pcs': macarons + macarons2,
                 'Cheesecake': cheesecake + cheesecake2,
             },
             'Hot drinks': {
@@ -346,7 +317,7 @@ async def airlineOptimizer(flight_number: int, occupancy=random.randint(160,189)
                 'Salty Peanuts & Smoked Almonds': peanuts + peanuts2,
             },
             'Cold Bevarages': {
-                'Schweppes': schweppes + schweppes2,
+                'Tonic': schweppes + schweppes2,
                 'Fanta': fanta + fanta2,
                 'Coca cola': coca_cola + coca_cola2,
                 'Coca cola Zero': coca_cola_zero + coca_cola_zero2,
