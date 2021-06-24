@@ -42,10 +42,10 @@ async def airlineOptimizer(flight_number: int, occupancy=random.randint(160,189)
     children = occupancy - male - female
     inf = random.randint(0,4)
 
-    nationality_majority_country = NationalityMajorityCountry(origin)
-    nationality_majority_count =  NationalityMajorityCount(occupancy)
-    nationality_minority_country = NationalityMinorityCountry(destination)
-    nationality_minority_count =  NationalityMinorityCount(occupancy, nationality_majority_count)
+    nationality_majority_country =NationalityMajorityCountry(origin)
+    nationality_majority_count = NationalityMajorityCount(occupancy)
+    nationality_minority_country =NationalityMinorityCountry(destination)
+    nationality_minority_count = NationalityMinorityCount(occupancy, nationality_majority_count)
 
 
     flights2 = Flight_api(flight_number2_temp)
@@ -106,11 +106,8 @@ async def airlineOptimizer(flight_number: int, occupancy=random.randint(160,189)
     quiche = Product('quiche', occupancy, culture_coefficients, daytime)
 
 
-    lentil_salad = Product('lentil_salad', occupancy, culture_coefficients, daytime)
     noodle_soup = Product('noodle_soup', occupancy, culture_coefficients, daytime)
     couscous = Product('couscous', occupancy, culture_coefficients, daytime)
-
-    macarons = Product('macaroons', occupancy, culture_coefficients, daytime)
     cheesecake = Product('cheesecake', occupancy, culture_coefficients, daytime)
 
     americano = Product('americano', occupancy, culture_coefficients, daytime)
@@ -157,13 +154,9 @@ async def airlineOptimizer(flight_number: int, occupancy=random.randint(160,189)
     cheese_baguette2 = Product('cheese_baguette', occupancy2, culture_coefficients, daytime2)
     quiche2 = Product('quiche', occupancy2, culture_coefficients, daytime2)
 
-
-
-    lentil_salad2 = Product('lentil_salad', occupancy2, culture_coefficients, daytime2)
     noodle_soup2 = Product('noodle_soup', occupancy2, culture_coefficients, daytime2)
     couscous2 = Product('couscous', occupancy2, culture_coefficients, daytime2)
 
-    macarons2 = Product('macaroons', occupancy2, culture_coefficients, daytime2)
     cheesecake2 = Product('cheesecake', occupancy2, culture_coefficients, daytime2)
 
     pilsner2 = Product('pilsner', occupancy2, culture_coefficients, daytime2)
@@ -202,16 +195,16 @@ async def airlineOptimizer(flight_number: int, occupancy=random.randint(160,189)
     cappy_orange2 =Product('cappy_orange', occupancy2, culture_coefficients, daytime2)
     rajec2 = Product('rajec', occupancy2, culture_coefficients, daytime2)
 
-    salty_snacks = (cricri + pringles_original + pringles_sour + peanuts + olives + lentil_salad + noodle_soup + couscous)/9
-    sweet_snacks = (macarons + cheesecake + nutella + haribo + m_n_m + snickers)/6
+    salty_snacks = (cricri + pringles_original + pringles_sour + peanuts + olives + noodle_soup + couscous)/9
+    sweet_snacks = (cheesecake + nutella + haribo + m_n_m + snickers)/6
     sandwich = (panini + chicken_bacon + cheese_baguette + quiche)/4
     hot_drinks = (americano + cappuccino + tea)/3
     soft_drinks = (schweppes + fanta + coca_cola + coca_cola_zero + sprite + birel + cappy_apple + cappy_orange + rajec)/9
     alcohol_beverages = (pilsner + white_wine + red_wine + prosecco)/4
     shots = (vodka + jameson + beefeater + becherovka + ripe_pear)/5
 
-    salty_snacks2 = (cricri2 + pringles_original2 + pringles_sour2 + peanuts2 + olives2 + lentil_salad2 + noodle_soup2 + couscous2)/9
-    sweet_snacks2 = (macarons2 + cheesecake2 + nutella2 + haribo2 + m_n_m2 + snickers2)/6
+    salty_snacks2 = (cricri2 + pringles_original2 + pringles_sour2 + peanuts2 + olives2 + noodle_soup2 + couscous2)/9
+    sweet_snacks2 = (cheesecake2 + nutella2 + haribo2 + m_n_m2 + snickers2)/6
     sandwich2 = (panini2 + chicken_bacon2 + cheese_baguette2 + quiche2)/4
     hot_drinks2 = (americano2 + cappuccino2 + tea2)/3
     soft_drinks2 = (schweppes2 + fanta2 + coca_cola2 + coca_cola_zero2 + sprite2 + birel2 + cappy_apple2 + cappy_orange2 + rajec2)/9

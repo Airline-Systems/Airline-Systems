@@ -33,9 +33,9 @@ mean_sales_pringles_sour: 0.018617021
 mean_sales_olives: 0.002659574
 mean_sales_peanuts: 0.005319149
 
-mean_sales_americano: 0.074468
-mean_sales_tea: 0.068754
-mean_sales_cappuccino: 0.068973
+mean_sales_americano: 0.054468
+mean_sales_tea: 0.048754
+mean_sales_cappuccino: 0.038973
 
 mean_sales_schweppes: 0.002659574
 mean_sales_fanta: 0.007978723
